@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Systems CSS Demo</title>
+    <link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+<main class="stack wrapper">
+    <h1>Algorithmic CSS examples</h1>
+    <resize-container>
+        <h2 slot="title">Fluid categories</h2>
+        <div slot="template" id="cluster-example">
+            <section class="cluster">
+                <article>Home</article>
+                <article>Business, industry and trade</article>
+                <article>Economy</article>
+                <article>Employment and labour market</article>
+                <article>People, population and community</article>
+                <article>Taking part in a survey?</article>
+                <article>Chuck Berry?</article>
+                <article>Charizard</article>
+                <article>And another box for good measure</article>
+            </section>
+        </div>
+    </resize-container>
+    <resize-container>
+        <h2 slot="title">Wrapping elements</h2>
+        <div slot="template" class="container-context" id="switch-step-example">
+            <section class="switch-step">
+                <article>Box 1</article>
+                <article>Box 2</article>
+                <article>Box 3</article>
+            </section>
+        </div>
+    </resize-container>
+    <resize-container>
+        <h2 slot="title">Standard, algorithmic grid</h2>
+        <div slot="template" id="grid-example">
+            <section class="grid">
+                <article>Box 1</article>
+                <article>Box 2</article>
+                <article>Box 3</article>
+                <article>Box 4</article>
+                <article>Box 5</article>
+                <article>Box 6</article>
+                <article>Box 7</article>
+                <article>Box 8</article>
+                <article>Box 9</article>
+            </section>
+        </div>
+    </resize-container>
+    <resize-container>
+        <h2 slot="title">Fluid Typography (via <a href="https://utopia.fyi">utopia.fyi</a>)</h2>
+        <div slot="template" class="container-context" id="fluid-typography-example">
+            <p class="step-5">Computed font size at step 5</p>
+            <p class="step-4">Computed font size at Step 4</p>
+            <p class="step-3">Computed font size at Step 3</p>
+            <p class="step-2">Computed font size at Step 2</p>
+            <p class="step-1">Computed font size at Step 1</p>
+            <p class="step-0">Computed font size at Step 0</p>
+        </div>
+    </resize-container>
+</main>
+
+<script src="resize-container.js"></script>
+</body>
+</html>
