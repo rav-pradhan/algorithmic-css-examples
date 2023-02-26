@@ -90,28 +90,48 @@ class ResizeContainer extends HTMLElement {
                 }
                 
                 button {
-                    font-size: 1.15rem;
-                    padding: 1em;
+                    font-size: 1.1rem;
+                    padding: 0.8rem;
                     background-color: #444546;
                     color: #fff;
                     border: 0;
                     text-transform: uppercase;
-                    letter-spacing: 0.5ch;
                     text-align: center;
+                    height: fit-content;
+                    align-self: center;
                 }
                 
                 button:hover {
                     cursor: pointer;
                 }
+                
+                details {
+                    padding: 1.5rem;
+                    margin-top: 1.5rem;
+                    border: 2px solid #444546;
+                    font-size: 1.2rem;
+                }
+                
+                details:hover{
+                    cursor: pointer;
+                }
             </style>
             <div>
                 <div class="playback">
-                    <slot name="title"></slot>  
-                        <button id="resize-play">Resize</button>                      
+                    <div>
+                        <slot name="title"></slot>  
+                        <slot name="description"></slot>
+                    </div>
+                      
+                    <button id="resize-play">Resize</button>                      
                 </div>
                 <div id="content" class="resize-container">
                     <slot name="template"></slot>
                 </div>            
+                <details>
+                    <summary>CSS code</summary>
+                    <slot name="css-code"></slot>
+                </details>
             </div>
 
         `

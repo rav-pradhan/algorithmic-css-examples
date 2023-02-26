@@ -22,6 +22,23 @@ h1, h2, p {
     color: var(--off-black);
 }
 
+h1 {
+    font-size: var(--step-3);
+}
+
+h2 {
+    font-size: var(--step-2);
+}
+
+h3 {
+    font-size: var(--step-1);
+}
+
+p {
+    font-size: var(--step-0);
+    max-width: 60ch;
+}
+
 .container-context {
     container-type: inline-size;
 }
@@ -45,7 +62,15 @@ h1, h2, p {
 }
 
 .stack > * + * {
-    margin-block-start: 2rem;
+    margin-block-start: var(--space, 2em);
+}
+
+.flow {
+    --space: 1em;
+}
+
+.flow :is(h1 + *) {
+    --space: 2em;
 }
 
 #cluster-example .cluster {
@@ -101,7 +126,7 @@ h1, h2, p {
 /*noinspection CssInvalidPropertyValue*/
 .switch-step > * {
     flex-grow: 1;
-    flex-basis: calc((25rem - 100%) * 999);
+    flex-basis: calc((42rem - 100%) * 999);
 }
 
 .switch-step > :nth-last-child(n+ 4),
@@ -125,4 +150,20 @@ article * {
     display: grid;
     grid-gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+}
+
+pre {
+    margin: 0;
+}
+
+code {
+    font-family: monospace;
+    font-size: 1.05rem;
+    padding: 0.1rem;
+    letter-spacing: 1px;
+}
+
+details {
+    margin-top: 1rem;
+
 }
